@@ -7,7 +7,6 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
     //let secret_number: u32 = random() % 100 + 1; // This is the same as the above line
-    println!("The secret number is: {}", secret_number);
 
     loop {
         println!("\nPlease input your guess.");
@@ -27,7 +26,6 @@ fn main() {
         };
 
         println!("You guessed: {}", guess);
-        // println!("The secret number is: {}", secret_number);
 
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("This number is small!"),
